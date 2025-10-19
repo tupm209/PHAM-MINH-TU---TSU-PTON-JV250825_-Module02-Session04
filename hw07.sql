@@ -12,7 +12,8 @@ CREATE TABLE Orders(
 	`orderId` INT PRIMARY KEY,
     `customerId` INT NOT NULL,
     `orderDate` DATE,
-    `totalAmount` DEC (10, 2) NOT NULL
+    `totalAmount` DEC (10, 2) NOT NULL,
+	FOREIGN KEY (customerId) REFERENCES Customers(customerId)
 );
 
 INSERT INTO Customers VALUES (1, "Nguyen Van A", "nva@gmail.com", "2023-12-01");
